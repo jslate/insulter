@@ -1,10 +1,9 @@
 class InsultsController < ApplicationController
 
   def index
-    @insults = Insult.all
     respond_to do |format|
       format.html
-      format.json { render json: @insults }
+      format.json { render json: Insult.all }
     end
   end
 
