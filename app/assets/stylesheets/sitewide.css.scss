@@ -1,0 +1,29 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 30px 0 0 0;
+  padding: 0;
+  li {
+    padding: 10px 0 10px 0;
+    border-top: 1px solid #ddd;
+  }
+}
+
+form.formtastic {
+  margin-top: 30px;
+}
+
+.up, .down {
+  display: inline-block;
+  width: 40px;
+  float: right;
+  img { margin-right: 10px; vertical-align: text-bottom;}
+  .count {display: inline;}
+}
