@@ -1,19 +1,19 @@
 h1 Insults
 
-ul
-  - @insults.each do |insult|
-    li
-      .up
-        = link_to up_thumb_insult_path(insult), remote: true, method: :post, data: {type: :json} do
-          img src="/assets/up.svg" height="15"
-        .count = insult.up_thumbs
-      .down
-        = link_to down_thumb_insult_path(insult), remote: true, method: :post, data: {type: :json} do
-          img src="/assets/down.svg" height="15"
-        .count = insult.down_thumbs
-      .sentence #{insult.name}, you are a #{insult.adjective} #{insult.noun} and you smell like #{insult.smell_like}.
-
-= semantic_form_for :insult, url: insults_path do |f|
+ul#insults
+= semantic_form_for :insult, url: insults_path, remote: true do |f|
   = f.inputs :name, :adjective, :noun, :smell_like
   = f.actions
+
+script type="text/mustache" id="insult-template"
+  li
+    .up
+      = link_to '{{up_thumb_path}}', remote: true, method: :post, data: {type: :json} do
+        img src="/assets/up.svg" height="15"
+      .count {{up_thumbs}}
+    .down
+      = link_to '{{down_thumb_path}}', remote: true, method: :post, data: {type: :json} do
+        img src="/assets/down.svg" height="15"
+      .count {{down_thumbs}}
+    .sentence {{name}}, you are a {{adjective}} {{noun}} and you smell like {{smell_like}}.
 

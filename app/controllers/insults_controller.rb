@@ -2,11 +2,15 @@ class InsultsController < ApplicationController
 
   def index
     @insults = Insult.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @insults }
+    end
   end
 
   def create
-    Insult.create(insult_params)
-    redirect_to insults_path
+    insult = Insult.create(insult_params)
+    render json: insult
   end
 
   def up_thumb

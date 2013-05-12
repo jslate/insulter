@@ -7,6 +7,7 @@ gem 'sqlite3'
 gem 'neat'
 gem 'slim'
 gem 'formtastic'
+gem 'active_model_serializers'
 
 # Gems used only for assets and not required
 # in production environments by default.
