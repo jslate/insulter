@@ -2,6 +2,8 @@ h1 Insults
 
 ul#insults
 
+= render_into('insult-template', 'ul#insults', @insults)
+
 = semantic_form_for :insult, url: insults_path, remote: true do |f|
   = f.inputs :name, :adjective, :noun, :smell_like
   = f.actions
