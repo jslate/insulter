@@ -12,11 +12,11 @@ script type="text/mustache" id="insult-template"
   li
     .up
       = link_to '{{up_thumb_path}}', remote: true, method: :post, data: {type: :json} do
-        img src="/assets/up.svg" height="15"
+        img src="/assets/up.svg" height="30"
       .count {{up_thumbs}}
     .down
       = link_to '{{down_thumb_path}}', remote: true, method: :post, data: {type: :json} do
-        img src="/assets/down.svg" height="15"
+        img src="/assets/down.svg" height="30"
       .count {{down_thumbs}}
     .sentence {{name}}, you are a {{adjective}} {{noun}} and you smell like {{smell_like}}.
 

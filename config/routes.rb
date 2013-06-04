@@ -7,5 +7,6 @@ Insulter::Application.routes.draw do
       post :down_thumb
     end
   end
+  resources :info, only: :index
 
 end

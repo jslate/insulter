@@ -1,0 +1,10 @@
+ul#info li {
+  display: none;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: none;
+  margin-top: 250px;
+  &.title { font-weight: bold; color: #44BBDD; }
+  &:first-child { display: block; }
+}
